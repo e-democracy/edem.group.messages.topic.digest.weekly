@@ -21,21 +21,16 @@ from gs.group.messages.topic.digest.base import BaseTopicsDigest
 
 class WeeklyTopicsDigest(BaseTopicsDigest):
     """ Represents the content of a weekly digest."""
+    last_author_key = 'last_post_user_id'
+    subject_key = 'subject'
 
     def __init__(self, context, siteInfo):
         super(WeeklyTopicsDigest, self).__init__(context, siteInfo)
-        self.__weeklyDigestQuery__ = None
-        self.__last_author_key__ = 'last_post_user_id'
-        self.__subject_key__ = 'subject'
         self.frequency = 7
 
-    def __getTopics__(self):
-        if self.__weeklyDigestQuery__ is None:
-            self.__weeklyDigestQuery__ = \
-                self.messageQuery.recent(
-                    self.siteInfo.id, self.groupInfo.id, limit=7, offset=0)
-
-        retval = self.__weeklyDigestQuery__
+    def get_topics(self):
+        retval = self.messageQuery.recent(
+            self.siteInfo.id, self.groupInfo.id, limit=7, offset=0)
         assert type(retval) == list
         return retval
 
