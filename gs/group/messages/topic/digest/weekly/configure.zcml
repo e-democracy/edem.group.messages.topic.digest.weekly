@@ -24,14 +24,14 @@
     factory=".notifier.WeeklyDigestNotifier" />
 
  <browser:page
-    name="gs-group-messages-topicsdigest-weekly.html"
+    name="gs-group-messages-topic-digest-weekly.html"
     for="gs.group.base.interfaces.IGSGroupMarker"
     class=".notifiermessages.WeeklyMessage"
     template="browser/templates/weeklyTopicsDigest-html.pt"
     permission="zope2.View"/>
 
   <browser:page
-    name="gs-group-messages-topicsdigest-weekly.txt"
+    name="gs-group-messages-topic-digest-weekly.txt"
     for="gs.group.base.interfaces.IGSGroupMarker"
     class=".notifiermessages.WeeklyMessageText"
     template="browser/templates/weeklyTopicsDigest-txt.pt"
