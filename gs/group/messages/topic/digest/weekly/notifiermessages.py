@@ -16,6 +16,7 @@ from __future__ import absolute_import, unicode_literals
 from logging import getLogger
 log = getLogger('gs.group.messages.topic.digest.daily')
 from zope.cachedescriptors.property import Lazy
+from gs.content.email.base import TextMixin
 from gs.group.messages.topic.digest.base import TopicsDigestMessage
 from .topicsdigest import WeeklyTopicsDigest
 
@@ -27,9 +28,9 @@ class WeeklyMessage(TopicsDigestMessage):
         return retval
 
 
-class WeeklyMessageText(WeeklyMessage):
-    def __call__(self, topicsDigest=None):
-        retval = super(WeeklyMessageText, self).__call__(topicsDigest)
-        self.request.response.setHeader(b"Content-Type",
-                                        b"text/plain; charset=UTF-8")
-        return retval
+class WeeklyMessageText(WeeklyMessage, TextMixin):
+    def __init__(self, group, request):
+        super(WeeklyMessageText, self).__init__(group, request)
+        f = 'gs-group-messages-topic-digest-weekly-{0}-{1}.txt'
+        filename = f.format(self.siteInfo.id, self.groupInfo.id)
+        self.set_header(filename)

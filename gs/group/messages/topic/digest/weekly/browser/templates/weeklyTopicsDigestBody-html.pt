@@ -12,7 +12,7 @@
     <tal:block
       repeat="topic options/topicsDigest/topics | view/topicsDigest/topics | python:[]">
       <li class="hentry">
-        <a  href="#"
+        <a  href="#" class="topic"
             tal:attributes="href topic/topic_url"
             tal:content="topic/topic_subject">Topic Subject</a>
         <ul>
