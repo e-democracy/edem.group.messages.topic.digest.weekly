@@ -9,8 +9,7 @@
       <tal:block content="view/groupInfo/name"/>:
       <tal:block content="view/siteInfo/name"/></title>
   </head>
-  <body style="font-family:arial,helvetica,clean,sans-serif;line-height:1.385;"
-        tal:content="structure provider:groupserver.WeeklyTopicsDigestHtmlVM">
+  <body tal:content="structure provider:groupserver.WeeklyTopicsDigestHtmlVM">
     Content of the weekly topics digest in html.
   </body>
 </html>
