@@ -1,6 +1,15 @@
 Changelog
 =========
 
+1.0.0 (2015-06-26)
+==================
+
+* Renaming the product `edem.group.messages.topic.digest.base`_
+
+.. _edem.group.messages.topic.digest.base:
+   https://github.com/groupserver/edem.group.messages.topic.digest.base
+
+
 1.0.0 (2015-03-23)
 ------------------
 

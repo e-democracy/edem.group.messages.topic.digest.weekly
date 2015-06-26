@@ -18,7 +18,7 @@ from setuptools import setup, find_packages
 from version import get_version
 
 version = get_version()
-name = 'gs.group.messages.topic.digest.weekly'
+name = 'edem.group.messages.topic.digest.weekly'
 
 with codecs.open('README.rst', encoding='utf-8') as f:
     long_description = f.read()
@@ -47,14 +47,11 @@ setup(name=name,
       keywords='groupserver, email, digest, topic, notification',
       author='Bill Bushey',
       author_email='wbushey@acm.org',
-      maintainer='Michael JasonSmith',
-      maintainer_email='mpj17@onlinegroups.net',
-      url='https://github.com/groupserver/{0}'.format(name),
+      url='https://github.com/e-democracy/{0}'.format(name),
       license='ZPL 2.1',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['gs', 'gs.group', 'gs.group.messages',
-                          'gs.group.messages.topic',
-                          'gs.group.messages.topic.digest'],
+      namespace_packages=['.'.join(name.split('.')[:i])
+                          for i in range(1, len(name.split('.')))],
       include_package_data=True,
       zip_safe=False,
       install_requires=[

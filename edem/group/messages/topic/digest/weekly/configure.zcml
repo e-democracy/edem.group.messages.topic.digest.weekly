@@ -19,20 +19,22 @@
   <adapter
     name="gs-group-messages-topic-digest-weekly-notifier"
     for="gs.group.base.interfaces.IGSGroupMarker
-         zope.publisher.interfaces.browser.IBrowserRequest"
+         edem.skin.interfaces.IEDemSkin"
     provides="gs.group.messages.topic.digest.base.interfaces.ITopicsDigestNotifier"
     factory=".notifier.WeeklyDigestNotifier" />
 
- <browser:page
+ <!--browser:page
     name="gs-group-messages-topic-digest-weekly.html"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     class=".notifiermessages.WeeklyMessage"
     template="browser/templates/weeklyTopicsDigest-html.pt"
-    permission="zope2.View"/>
+    permission="zope2.View"/-->
 
   <browser:page
     name="gs-group-messages-topic-digest-weekly.txt"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     class=".notifiermessages.WeeklyMessageText"
     template="browser/templates/weeklyTopicsDigest-txt.pt"
     permission="zope2.View"/>
@@ -40,6 +42,7 @@
    <browser:viewletManager
     name="groupserver.WeeklyTopicsDigestHtmlVM"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     provides=".interfaces.IWeeklyTopicsDigestHtmlVM"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/topicsDigestVM.pt"
@@ -48,6 +51,7 @@
   <browser:viewletManager
     name="groupserver.WeeklyTopicsDigestTxtVM"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     provides=".interfaces.IWeeklyTopicsDigestTxtVM"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/topicsDigestVM.pt"
@@ -56,6 +60,7 @@
   <browser:viewlet
     name="groupserver.WeeklyTopicsDigestHeaderHtmlViewlet"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     manager=".interfaces.IWeeklyTopicsDigestHtmlVM"
     class="gs.group.messages.topic.digest.base.HeaderFooterViewlet"
     template="browser/templates/header-html.pt"
@@ -66,6 +71,7 @@
   <browser:viewlet
     name="groupserver.WeeklyTopicsDigestHeaderTxtViewlet"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     manager=".interfaces.IWeeklyTopicsDigestTxtVM"
     class="gs.group.messages.topic.digest.base.HeaderFooterViewlet"
     template="browser/templates/header-txt.pt"
@@ -76,6 +82,7 @@
   <browser:viewlet
     name="groupserver.WeeklyTopicsDigestHtmlViewlet"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     provides=".interfaces.IWeeklyTopicsDigestViewlet"
     manager=".interfaces.IWeeklyTopicsDigestHtmlVM"
     class=".viewlets.WeeklyTopicsDigestViewlet"
@@ -84,20 +91,22 @@
     title="Weekly Topics Digest"
     permission="zope2.Public" />
 
-  <browser:viewlet
+  <!--browser:viewlet
     name="groupserver.WeeklyTopicsDigestTxtViewlet"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     provides=".interfaces.IWeeklyTopicsDigestViewlet"
     manager=".interfaces.IWeeklyTopicsDigestTxtVM"
     class=".viewlets.WeeklyTopicsDigestViewlet"
     template="browser/templates/weeklyTopicsDigestBody-txt.pt"
     weight="20"
     title="Weekly Topics Digest"
-    permission="zope2.Public" />
+    permission="zope2.Public" /-->
 
   <browser:viewlet
     name="groupserver.WeeklyTopicsDigestFooterHtmlViewlet"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     manager=".interfaces.IWeeklyTopicsDigestHtmlVM"
     class="gs.group.messages.topic.digest.base.HeaderFooterViewlet"
     template="browser/templates/footer-html.pt"
@@ -108,6 +117,7 @@
   <browser:viewlet
     name="groupserver.WeeklyTopicsDigestFooterTxtViewlet"
     for="gs.group.base.interfaces.IGSGroupMarker"
+    layer="edem.skin.interfaces.IEDemSkin"
     manager=".interfaces.IWeeklyTopicsDigestTxtVM"
     class="gs.group.messages.topic.digest.base.HeaderFooterViewlet"
     template="browser/templates/footer-txt.pt"

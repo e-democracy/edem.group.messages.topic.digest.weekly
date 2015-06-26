@@ -1,14 +1,13 @@
-=========================================
-``gs.group.messages.topic.digest.weekly``
-=========================================
+===========================================
+``edem.group.messages.topic.digest.weekly``
+===========================================
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The weekly digest of topics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Author: `Michael JasonSmith`_; `Bill Bushey`_
-:Contact: Michael JasonSmith <mpj17@onlinegroups,net>
 :Date: 2015-04-27
-:Organization: `GroupServer.org`_
+:Organization: `E-Democracy.org`_
 :Copyright: This document is licensed under a
   `Creative Commons Attribution-Share Alike 4.0 International License`_
   by `OnlineGroups.net`_.
@@ -57,14 +56,12 @@ Resources
 =========
 
 - Code repository:
-  https://github.com/groupserver/gs.group.messages.topic.digest.weekly
-- Questions and comments to http://groupserver.org/groups/development
-- Report bugs at https://redmine.iopen.net/projects/groupserver
+  https://github.com/e-democracy/edem.group.messages.topic.digest.weekly
 
 .. _GroupServer: http://groupserver.org/
-.. _GroupServer.org: http://groupserver.org/
+.. _E-Democracy.org: http://forums.e-democracy.org/
 .. _OnlineGroups.Net: https://onlinegroups.net
-.. _Bill Bushey: http://groupserver.org/p/wbushey
-.. _Michael JasonSmith: http://groupserver.org/p/mpj17
+.. _Bill Bushey: http://forums.e-democracy.org/p/billbushey
+.. _Michael JasonSmith: http://forums.e-democracy.org/p/mpj17
 
 ..  LocalWords:  Viewlets wbushey mpj github Bushey viewlets
